@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 196, 204);
+}
+
+main {
+    width: 875px;
+    border: 1px solid black;
+    /* Style  */
+    display: grid;
+    grid-template-areas:
+        "topbar topbar topbar"
+        "ads heroContent sidebar"
+        "footer footer footer";
+    /* Style the Column Spacing */
+    grid-template-columns: 1fr 2fr 1fr;
+
+    /* Style the height of the rows */
+    grid-template-rows: 3rem 10rem 3rem;
+    gap: 1em;
+    background-color: antiquewhite;
+}
+
+header {
+    grid-area: topbar;
+    background-color: rgb(255, 159, 99);
+}
+
+section {
+    grid-area: ads;
+    background-color: rgb(64, 64, 127);
+}
+
+.hero {
+    grid-area: heroContent;
+    background-color: plum;
+}
+
+nav {
+    grid-area: sidebar;
+    background-color: rgb(120, 173, 120);
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(255, 103, 103);
+}
